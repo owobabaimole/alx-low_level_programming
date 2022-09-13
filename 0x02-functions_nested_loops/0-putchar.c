@@ -5,11 +5,9 @@
 *
 * Return: Always 0.
 */
-
 int main(void)
 {
-	char *sh = "main.h";
-	
+	char *sh = "_putchar";
 
 	while (*sh)
 	{
@@ -19,3 +17,4 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+
