@@ -1,21 +1,20 @@
-#include "main.h"
+#include "_putchar.h"
 
 /**
-* main - prints _putchar
+* main - check the code
 *
-* Description: prints _putchar
-*
-* Return: 0 (Success)
+* Return: Always 0.
 */
 
 int main(void)
 {
-	char text[9] = "_putchar";
-	int i = 0;
+	char *sh = "_putchar";
+	
 
-	for (i = 0; i < 8; i++)
+	while (*sh)
 	{
-		_putchar(text[i]);
+		_putchar(*sh);
+		sh++;
 	}
 	_putchar('\n');
 	return (0);
