@@ -1,39 +1,24 @@
+#include <stdio.h>
 #include "main.h"
-/**
- * print_number - prints a number
- * @n: Input number
- */
 
+/**
+ * print_number - function that prints an integer
+ * @n: the integer to be printed
+ *
+ * Return: 0
+ */
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
+	unsigned int k = n;
 
-	res = n;
-	expo = len =  1;
-/*Check negatives*/
-	if (res < 0)
+	if (n < 0)
 	{
-		res *= -1;
+		n *= -1;
+		k = n;
 		_putchar('-');
 	}
-
-/**/
-	temp = res;
-	while (temp >= 10)
-	{
-		len++;
-		temp /= 10;
-	}
-
-/*Create Exponent*/
-	for (i = 1; i < len; i++)
-		expo *= 10;
-/*Main */
-	while (expo > 1)
-	{
-		_putchar((res / expo) % 10 + '0');
-		expo /= 10;
-	}
-	_putchar(res % 10 + '0');
+	k /= 10;
+	if (k != 10)
+		print_number(k);
+	_putchar((unsigned int) n % 10 + '0');
 }
-
