@@ -1,39 +1,23 @@
-#include main.h
+#include "main.h"
 
 /**
- * factorial - factorial n
- * @n: integer arams
- * Return: recursion
+ * factorial - a function that returns the factorial of a given number
+ * @n: the input number(s)
+ * Return: the factorial of the number
  */
 
 int factorial(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	if (n == 1)
-	{
-		return (1);
-	}
-	return (n * factorial(n - 1));
-}#include "main.h"
-
-/**
- * factorial - factorial n
- * @n: integer arams
- * Return: recursion
- */
-
-int factorial(int n)
+if (n < 0)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	if (n == 1)
-	{
-		return (1);
-	}
-	return (n * factorial(n - 1));
+return (-1);
+}
+else if (n == 0)
+{
+return (1);
+}
+else
+{
+return (n * factorial(n - 1));
+}
 }
