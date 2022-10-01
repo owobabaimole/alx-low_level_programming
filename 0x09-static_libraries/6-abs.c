@@ -1,14 +1,13 @@
 #include "main.h"
+
 /**
-* _abs - prints the absolute value of a number
-*@i: number targeted
-*Return: returns 0
-*/
-int _abs(int i)
+ * _abs - computes the absolute value of an integer
+ * @num: the number to be converted to its absolute
+ * Return: returns an integer
+ */
+int _abs(int num)
 {
-if (i > 0)
-return (i);
-else if (i < 0)
-return (-i);
-else
-return (0);
+	int abs = num * ((num > 0) - (num < 0));
+
+	return (abs);
+}
